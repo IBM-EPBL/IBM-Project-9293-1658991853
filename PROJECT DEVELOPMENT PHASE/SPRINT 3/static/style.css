@@ -1,0 +1,41 @@
+.separator{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    height:600px;
+}
+
+
+
+.left{
+    background-color: black;
+    color:white;
+    width:450px;
+}
+
+.right{
+    background-color: #f1d64a;
+    width:450px;
+}
+
+h2{
+    margin:auto;
+    padding: 40px;
+    padding-left: 450px;
+}
+
+.col{
+
+    padding:50px;
+}
+
+.nav{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+span{
+    height:100px;
+    width:100px;
+}

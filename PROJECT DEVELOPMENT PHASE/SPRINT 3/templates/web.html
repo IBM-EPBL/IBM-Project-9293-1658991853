@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <div class="separator">
         <div class="col left">
             <!--<h3>Input</h3>-->
-            <form onsubmit="display(event)">
+            <form method="POST" action="/predict" enctype="multipart/form-data">
                 <br>
                 <br>
                 <br>
@@ -22,27 +22,24 @@
                 Upload an image:
                 <br>
                 <br>
-                
-                <input type="file" id="img" name="img">
-                <div id="dis">
-                    <img src="" alt="" name="digit">
-                </div>
+
+                <input type="file" name="file">
 
                 <button type="submit">Submit</button>
 
             </form>
         </div>
         <div class="col right">
-            <!--<h3>Results</h3>-->
-            <!--{% if predicted %}
+            <h3>Results</h3>
+            {% if predicted %}
 
             <p>{{ predicted }}</p>
 
 
-            {% endif %}-->
+            {% endif %}
         </div>
     </div>
-    <script>
+    <!-- <script>
         function display(event) {
             event.preventDefault();
             console.log("yes");
@@ -50,7 +47,7 @@
             console.log(path)
             document.getElementById("dis").src = path;
         }
-    </script>
+    </script> -->
 
 </body>
 
